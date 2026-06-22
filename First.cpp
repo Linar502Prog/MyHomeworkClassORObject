@@ -46,7 +46,7 @@ int main() {
 		std::cout << "Введите num1 :" << std::endl;
 		std::cin >> value1;
 		if (std::cin.fail()) {
-			std::cout << "ВВЕДЕНО НЕКОРРЕКТНОЕ ЗНАЧЕНИЕ!!!!" << std::endl << "!!!!!ВВОДИТЬ СТРОГО ЦЕЛЫЕ ЧИСЛА!!!!!" << std::endl;
+			std::cout << "ВВЕДЕНО НЕКОРРЕКТНОЕ ЗНАЧЕНИЕ!!!!" << std::endl << "!!!!!ВВОДИТЬ СТРОГО ЧИСЛА!!!!!" << std::endl;
 			std::cin.clear();
 			std::cin.ignore();
 			continue;
@@ -55,7 +55,7 @@ int main() {
 			std::cout << "Введите num2 :" << std::endl;
 			std::cin >> value2;
 			if (std::cin.fail()) {
-				std::cout << "ВВЕДЕНО НЕКОРРЕКТНОЕ ЗНАЧЕНИЕ!!!!" << std::endl << "!!!!!ВВОДИТЬ СТРОГО ЦЕЛЫЕ ЧИСЛА!!!!!" << std::endl;
+				std::cout << "ВВЕДЕНО НЕКОРРЕКТНОЕ ЗНАЧЕНИЕ!!!!" << std::endl << "!!!!!ВВОДИТЬ СТРОГО ЧИСЛА!!!!!" << std::endl;
 				std::cin.clear();
 				std::cin.ignore();
 				continue;
