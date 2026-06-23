@@ -1,16 +1,11 @@
 class Counter {
 	int num;
 public:
+	Counter(int value) {
+		num = value;
+	}
 	Counter() {
 		num = 1;
-	}
-	int get_num() {
-		return num;
-	}
-	void set_num(int value) {
-		if (value > 0) {
-			num = value;
-		}
 	}
 	int cur_count() {
 		return num;
@@ -27,7 +22,6 @@ public:
 		return false;
 	}
 };
-
 #include <iostream>
 #include "Windows.h"
 int main() {
@@ -38,15 +32,15 @@ int main() {
 	char command;
 	bool flag = true;
 	Counter count;
-	std::cout << "¬˚ ıÓÚËÚÂ ÛÍ‡Á‡Ú¸ Ì‡˜‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ Ò˜∏Ú˜ËÍ‡ ? ¬‚Â‰ËÚÂ ‰‡ ËÎË ÌÂÚ : " << std::endl;
+	std::cout << "–í—ã —Ö–æ—Ç–∏—Ç–µ —É–∫–∞–∑–∞—Ç—å –Ω–∞—á–∞–ª—å–Ω–æ–µ –∑–Ω–∞—á–µ–Ω–∏–µ —Å—á—ë—Ç—á–∏–∫–∞ ? –í–≤–µ–¥–∏—Ç–µ –¥–∞ –∏–ª–∏ –Ω–µ—Ç : " << std::endl;
 	std::cin >> word;
-	if (word == "‰‡") {
-		std::cout << "¬‚Â‰ËÚÂ Ì‡˜‡Î¸ÌÓÂ ÁÌ‡˜ÂÌËÂ Ò˜∏Ú˜ËÍ‡ : " << std::endl;
+	if (word == "–¥–∞") {
+		std::cout << "–í–≤–µ–¥–∏—Ç–µ –Ω–∞—á–∞–ª—å–Ω–æ–µ –∑–Ω–∞—á–µ–Ω–∏–µ —Å—á—ë—Ç—á–∏–∫–∞ : " << std::endl;
 		std::cin >> value;
-		count.set_num(value);
+		count = Counter(value);
 	}
 	while (flag) {
-		std::cout << "¬‚Â‰ËÚÂ ÍÓÏ‡Ì‰Û('+', '-', '=' ËÎË 'ı') : " << std::endl;
+		std::cout << "–í–≤–µ–¥–∏—Ç–µ –∫–æ–º–∞–Ω–¥—É('+', '-', '=' –∏–ª–∏ '—Ö') : " << std::endl;
 		std::cin >> command;
 		if (command == '+') {
 			std::cout << count.incr_count() <<std::endl;
@@ -57,12 +51,10 @@ int main() {
 		else if (command == '=') {
 			std::cout << count.cur_count() << std::endl;
 		}
-		else if (command == 'ı') {
-			std::cout << "ƒÓ Ò‚Ë‰‡ÌËˇ! " << std::endl;
+		else if (command == '—Ö') {
+			std::cout << "–î–æ —Å–≤–∏–¥–∞–Ω–∏—è! " << std::endl;
 			flag = count.exit_count();
 		}
-
 	}
-	
 	return EXIT_SUCCESS;
 }
